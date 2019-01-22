@@ -11,7 +11,7 @@ class SplashScreen extends Component {
             this.setState({
                 slide: 2
             })
-        }, 2000)
+        }, 2500)
     }
         
     render() {

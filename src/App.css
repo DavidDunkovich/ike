@@ -29,8 +29,8 @@
 /* Animations */
 
 .fade-in-up {
-  -webkit-animation: fadeinup 4s ease-in forwards;
-  animation: fadeinup 4s ease-in forwards;
+  -webkit-animation: fadeinup 2s ease-in forwards;
+  animation: fadeinup 2s ease-in forwards;
 }
 @-webkit-keyframes fadeinup {
   0% { 
@@ -40,7 +40,7 @@
     left: 50%;
     transform: translate(-50%, -50%); 
   }
-  65% { 
+  50% { 
     opacity: 1;
     font-size: 3.5em;
     top: 50%;
@@ -63,7 +63,7 @@
     left: 50%;
     transform: translate(-50%, -50%); 
   }
-  65% { 
+  50% { 
     opacity: 1;
     font-size: 3.5em;
     top: 50%;
