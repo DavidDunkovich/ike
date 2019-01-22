@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Icon, Divider} from 'semantic-ui-react';
+import {Icon} from 'semantic-ui-react';
 
 class Navigation extends Component {
 
