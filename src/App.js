@@ -5,18 +5,12 @@ import SplashScreen from './SplashScreen';
 class App extends Component {
 
   state = {
-    splashScreen: true
+    
   }
 
   componentDidMount = () =>{
-    setTimeout(() => {
-      this.setState({
-        splashScreen: false
-      })
-    }, 10000);
   }
   
-
   render() {
     return (
       <div className='app'>

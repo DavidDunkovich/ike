@@ -8,25 +8,77 @@
   background-color: black;
   padding-top: 10px;
   padding-bottom: 10px;
+
+  -webkit-animation: fadeinnavbar 6s ease-in forwards; /*change to 6s*/
+  animation: fadeinnavbar 6s ease-in forwards;
 }
-.menu-text{
-  color: white; 
-  font-size: calc(6vmin);
+#menu{
+  position: fixed;
+  left: 0;
+  top: 48px;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(-100vw);
 }
-.menu-icon{
-  margin-left: 10px;
+
+.menu-close{
+  margin-top: 10px !important;
+  margin-right: 10px !important;
+  float: right;
 }
 
 /* Splash Screen CSS */
 
 .splash-screen-text{
-  position: absolute;
+  position: fixed;
 }
 .white{
   color: white;
 }
 
 /* Animations */
+#menu.visible{
+  -webkit-animation: slidein .25s ease-in forwards;
+  animation: slidein .25s ease-in forwards;
+  
+}
+@keyframes slidein {
+  0%{
+    transform: translateX(-100vw);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes slidein {
+  0%{
+    transform: translateX(-100vw);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+#menu.hidden{
+  -webkit-animation: slideout .25s ease-in forwards;
+  animation: slideout .25s ease-in forwards;
+}
+@-webkit-keyframes slideout {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100vw);
+  }
+}
+@keyframes slideout {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100vw);
+  }
+}
 
 .fade-in-up {
   -webkit-animation: fadeinup 2s ease-in forwards;
@@ -125,11 +177,7 @@
   }
 }
 
-.fade-in-menu {
-  -webkit-animation: fadeinmenu 6s ease-in forwards;
-  animation: fadeinmenu 6s ease-in forwards;
-}
-@-webkit-keyframes fadeinmenu {
+@-webkit-keyframes fadeinnavbar {
   0% { 
     opacity: 0; 
   }
@@ -140,7 +188,7 @@
     opacity: 1;
   }
 }
-@keyframes fadeinmenu {
+@keyframes fadeinnavbar  {
   0% { 
     opacity: 0; 
   }
